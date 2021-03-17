@@ -1,0 +1,2 @@
+tag,dates,rmse,runtime,model_version,model_note,test
+Test country,"('2017-01-01', '2018-01-01')",{'rmse': 0.7},00:00:04,0.1,supervised learing model for time-series,True

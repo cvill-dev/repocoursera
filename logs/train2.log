@@ -1,0 +1,7 @@
+tag,united_kingdom
+dates,"('2017-11-30', '2019-05-31')"
+rmse,{'rmse': 37297.0}
+runtime,000:00:03
+model_version,0.1
+model_note,supervised learing model for time-series
+test,True
