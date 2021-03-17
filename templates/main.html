@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Capstone Project</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+	   Country:
+        <input name="country" type="string" value="all" required>
+        <br>
+        <br> Year:
+        <input name="year" type="number" value="2018" required>
+        <br>
+        <br> Month:
+        <input name="month" type="number" value="01" required>
+        <br>
+        <br>
+		<br> Day:
+        <input name="day" type="number" value="05" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Predicted values:
+           <p style="font-size:40px">{{ result }}</p>
+    {% endif %}
+</div>
+</html>
